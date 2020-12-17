@@ -54,25 +54,45 @@ while True:
     else: 
         print(f"{topping}을 넣었습니다.")
 '''
-
-# 연습문제 7-5
 '''
 prompt = "나이를 입력하세요"
 prompt += "\n(종료하고 싶으면 아무 문자나 입력하세요.): "
-age = input(prompt)
 
-active = True
-while active:
-    if age.isdigit():
-        age2 = int(age)
-        if 0 <age2 <3:
-            print("무료입니다. ")
-        elif 3 <= age2 <= 12:
-            print("$10")
-        elif age2 > 12:
-            print("$15")
-    elif age.isalpha():
+while True:
+    age = input(prompt)
+
+    if age.isalpha():
         print("프로그램을 종료합니다.")
-        # active = False  
+        break
+    else:
+        if age.isdigit():
+            age2 = int(age)
+            if 0 < age2 < 3:
+                print("무료입니다. ")
+            elif 3 <= age2 <= 12:
+                print("$10")
+            elif age2 > 12:
+                print("$15")
 '''
+# 연습문제 7-5
+# 플래그를 사용해서 풀려면 어떻게 해야 하는지 잘 모르겠음
+prompt = "나이를 입력하세요"
+prompt += "\n(종료하고 싶으면 아무 문자나 입력하세요.): "
+age = input(prompt) # 이거 위치를 while문 아래로 바꾸면 실행 됨.
+
+ticket_active = True
+while ticket_active:
+    if age.isalpha():
+        print("프로그램을 종료합니다.")
+        ticket_active = False
+    else:
+        if age.isdigit():
+            age2 = int(age)
+            if 0 < age2 < 3:
+                print("무료입니다. ")
+            elif 3 <= age2 <= 12:
+                print("$10")
+            elif age2 > 12:
+                print("$15")
+        
 
