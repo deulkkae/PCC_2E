@@ -53,7 +53,7 @@ restaurant3.describe_restaurant()
 restaurant1.open_restaurant()
 '''
 
-# 연습문제 9-2
+# 연습문제 9-3
 class User:
     """사용자 이름과 프로필 정보를 모델화"""
 
