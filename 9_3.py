@@ -168,6 +168,7 @@ user2.privileges.show_privileges()
 '''
 
 # 연습문제 9-9
+'''
 class Car:
     """자동차를 나타내는 코드"""
 
@@ -250,3 +251,20 @@ my_telsa.battery.describe_battery()
 my_telsa.battery.get_range()
 my_telsa.battery.upgrade_battery()
 my_telsa.battery.get_range()
+'''
+
+# 연습문제 9-14
+from random import randint
+x = randint(1, 6)
+
+class Die:
+    """주사위 클래스"""
+
+    def __init__(self):
+        self.sides = 6
+    
+    def roll_die(self):
+        print(x)
+
+dice1 = Die(10)
+dice1.roll_die()
